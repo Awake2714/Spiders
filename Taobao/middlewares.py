@@ -16,7 +16,7 @@ class UserAgentMiddleware(object):
 
 class ProxyMiddleware(object):
     def process_request(self, request, spider):
-        proxy_url = 'http://piping.mogumiao.com/proxy/api/get_ip_al?appKey=50cb3f42af0c4abd917e887172843888&count=1&expiryDate=0&format=2&newLine=2'
+        proxy_url = 'http://piping.mogumiao.com/proxy/api/get_ip_al?'
         res = requests.get(proxy_url, timeout=10)
         time.sleep(5)
         ip = res.text.strip('\n\r')
